@@ -42,7 +42,9 @@ namespace ConsoleApplication2
             // StatementsExceptions.UncheckedExample();
 
             /* Statements: Parameters */
-
+            // StatementsParameters.ParamsExample();
+            // StatementsParameters.RefExample();
+            StatementsParameters.OutExample();
 
 
             Console.Write("\n\nPress any key to continue...");

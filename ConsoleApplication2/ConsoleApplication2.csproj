@@ -38,7 +38,9 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Operators.cs" />
+    <Compile Include="ClassAccessModifers.cs" />
+    <Compile Include="ClassBaseNewThisOperators.cs" />
+    <Compile Include="ClassAsIsOperators.cs" />
     <Compile Include="StatementsExceptions.cs" />
     <Compile Include="StatementsControl.cs" />
     <Compile Include="ReferenceTypes.cs" />

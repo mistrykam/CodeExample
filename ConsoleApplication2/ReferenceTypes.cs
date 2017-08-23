@@ -31,30 +31,6 @@ namespace ConsoleApplication2
                 - dynamic
                 - object
         */
-
-        /* Access Modifer
-         
-            All types and type members have an accessibility level, controls usage in your assembly or other assemblies. 
-
-            Public
-                The type or member can be accessed by any other code in the same assembly or another assembly that references it.
-            
-            Private
-                The type or member can be accessed only by code in the same class or struct.
-            
-            Protected
-                The type or member can be accessed only by code in the same class or struct, or in a class that is derived from that class.
-            
-            Internal
-                The type or member can be accessed by any code in the same assembly, but not from another assembly.
-            
-            Protected internal
-                Within a derived class in another assembly or by any code in the assembly in which it is declared. 
-                Access from another assembly must take place within a class declaration that derives from the class 
-                in which the protected internal element is declared, and it must take place through an instance of 
-                the derived class type.        
-         */
-
         /*
            Interface 
                An interface contains only the signatures of methods, properties, events or indexers. A class or struct 
@@ -159,13 +135,19 @@ namespace ConsoleApplication2
          */
 
         public delegate void TestDelegateA(string message);   // think of this as class/struct declaration
-        public delegate long TestDelegateB(int m, int num);        public void Hello(string message)
+        public delegate long TestDelegateB(int m, int num);
+
+        public void Hello(string message)
         {
             Console.WriteLine("Hello {0}", message);
-        }        public long Adder(int a, int b)
+        }
+
+        public long Adder(int a, int b)
         {
             return a + b;
-        }        public static void DelegateExample()
+        }
+
+        public static void DelegateExample()
         {
             ReferenceTypes rt = new ReferenceTypes();
 
@@ -175,7 +157,8 @@ namespace ConsoleApplication2
             delegateA("world");                   // invoke it
             long result = delagateB(100, 200);
             Console.WriteLine("Result = {0}", result);
-        }
+        }
+
         public static void StringExample()
         {
             /* string 
@@ -229,7 +212,8 @@ namespace ConsoleApplication2
             BOX and UNBOXING
 
             When a variable of a value type is converted to object, it is said to be boxed.
-            When a variable of type object is converted to a value type, it is said to be unboxed.            When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap.         
+            When a variable of type object is converted to a value type, it is said to be unboxed.
+            When the CLR boxes a value type, it wraps the value inside a System.Object and stores it on the managed heap.         
          */
 
         class MyClass
@@ -274,7 +258,6 @@ namespace ConsoleApplication2
             about the operation,and that information is later used to evaluate the operation at run time. As part of the process,
             variables of type dynamic are compiled into variables of type object .Therefore, type dynamic exists only at
             compile time, not at run time.        
-
 
             NOTE: var vs dynamic, var the type is determined at compile time, whereas dynamic is at runtime.
          */

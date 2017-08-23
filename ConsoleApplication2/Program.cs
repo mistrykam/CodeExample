@@ -46,10 +46,18 @@ namespace ConsoleApplication2
             // StatementsParameters.RefExample();
             // StatementsParameters.OutExample();
 
-            /* Operators */
-            // Operators.ConvertObjectExample();
-            // Operators.CheckObjectExample();
-            Operators.NewHidingExample();
+            /* Class: As Is */
+            //ClassAsIsOperators.ConvertObjectExample();
+            //ClassAsIsOperators.CheckObjectExample();
+
+            /* Class: New Base This */
+            // ClassBaseNewThisOperators.NewHidingExample();
+            // ClassBaseNewThisOperators.BaseExample();
+            // ClassBaseNewThisOperators.ThisExample();
+            // ClassBaseNewThisOperators.IndexerExample();
+
+            /* Class: Access Modifers */
+            ClassAccessModifers.ClassExample();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadKey();

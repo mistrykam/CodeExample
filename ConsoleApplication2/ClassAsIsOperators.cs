@@ -2,7 +2,7 @@
 
 namespace ConsoleApplication2
 {
-    class Operators
+    class ClassAsIsOperators
     {
         /*  Operators
          *  
@@ -13,17 +13,11 @@ namespace ConsoleApplication2
 
             as - Converts an object to a compatible type.
             is - Checks the run-time type of an object.
-                        
-            new - operator Creates objects (StringBuilder sb = new StringBuilder())
-            new - modifier Hides an inherited member. 
-            new - constraint Qualifies a type parameter.    -- class ItemFactory<T> where T : new()
-
-            nameof - obtains the simple (unqualified) string name of a variable, type, or member.
-            sizeof - obtains the size of a type.
-            typeof - obtains the System.Type object for a type.
             
-            async - use the async modifier to specify that a method, lambda expression, or anonymous method is asynchronous.
-            await - suspends an async method until an awaited task is completed.
+            
+                        
+            new - operator Creates objects (StringBuilder sb = new StringBuilder())            
+            new - constraint Qualifies a type parameter.    -- class ItemFactory<T> where T : new()
          */
 
         internal class Animal
@@ -83,43 +77,6 @@ namespace ConsoleApplication2
                 Console.WriteLine("Animal is an Dog.");
             else
                 Console.WriteLine("Animal is NOT an Dog.");
-        }
-
-        /*
-           new
-            When used as a declaration modifier, the new keyword explicitly hides a member that is inherited from a base
-            class. When you hide an inherited member, the derived version of the member replaces the base class version.
-         */
-
-        internal class BaseObject
-        {
-            internal int variable = 1;
-
-            internal void Speak()
-            {
-                Console.WriteLine("This is the base class, variable = {0}", variable);
-            }
-        }
-
-        internal class DervivedObject : BaseObject
-        {
-            new internal int variable = 1000;
-
-            new internal void Speak()
-            {
-                Console.WriteLine("This is the dervived class, variable = {0}", variable);
-            }
-        }
-
-        public static void NewHidingExample()
-        {
-            BaseObject baseObject = new BaseObject();
-
-            baseObject.Speak();
-
-            DervivedObject dervivideObject = new DervivedObject();
-
-            dervivideObject.Speak();
         }
     }
 }

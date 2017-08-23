@@ -44,8 +44,12 @@ namespace ConsoleApplication2
             /* Statements: Parameters */
             // StatementsParameters.ParamsExample();
             // StatementsParameters.RefExample();
-            StatementsParameters.OutExample();
+            // StatementsParameters.OutExample();
 
+            /* Operators */
+            // Operators.ConvertObjectExample();
+            // Operators.CheckObjectExample();
+            Operators.NewHidingExample();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadKey();

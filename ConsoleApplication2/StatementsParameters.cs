@@ -17,8 +17,7 @@ namespace ConsoleApplication2
 
          - params - variable number of arguements list or array of the specified type
          - ref    - pass by reference (initialized)
-         - out    - which lets pass an argument to a method by reference rather than by value
-         
+         - out    - which lets pass an argument to a method by reference rather than by value         
          */
 
         /* Params */

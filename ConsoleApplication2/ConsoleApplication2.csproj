@@ -38,6 +38,7 @@
     <Reference Include="Microsoft.CSharp" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Operators.cs" />
     <Compile Include="StatementsExceptions.cs" />
     <Compile Include="StatementsControl.cs" />
     <Compile Include="ReferenceTypes.cs" />

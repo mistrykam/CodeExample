@@ -33,6 +33,11 @@ namespace ConsoleApplication2
             // StatementsControl.IterationExample();
             // StatementsControl.JumpExample();
 
+            /* Arrays */
+            Arrays.SingleArrayExample();
+            Arrays.MultiDimensionArrayExample();
+            Arrays.JaggedArrayExample();
+
             /* Statements: Exceptions */
 
             // StatementExceptions.ThrowExample();
@@ -57,7 +62,15 @@ namespace ConsoleApplication2
             // ClassBaseNewThisOperators.IndexerExample();
 
             /* Class: Access Modifers */
-            ClassAccessModifers.ClassExample();
+            // ClassAccessModifers.ClassExample();
+
+            /* Delegates */
+            // Delegates.DelegateExample();
+            // Delegates.DelegateExtendingClassBehaviour();
+            // Delegates.MulticastDelegate();
+
+            /* Class: Events */
+            // ClassEvent.EventExample();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadKey();

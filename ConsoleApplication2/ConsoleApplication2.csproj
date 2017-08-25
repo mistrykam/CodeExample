@@ -36,9 +36,11 @@
     <Reference Include="System" />
     <Reference Include="System.Core" />
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Arrays.cs" />
+    <Compile Include="AsyncAwait.cs" />
     <Compile Include="ClassAccessModifers.cs" />
     <Compile Include="ClassBaseNewThisOperators.cs" />
     <Compile Include="ClassAsIsOperators.cs" />
@@ -48,6 +50,7 @@
     <Compile Include="StatementsControl.cs" />
     <Compile Include="ReferenceTypes.cs" />
     <Compile Include="StatementsParameters.cs" />
+    <Compile Include="TaskParallelLibrary.cs" />
     <Compile Include="ValueTypes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -34,9 +34,9 @@ namespace ConsoleApplication2
             // StatementsControl.JumpExample();
 
             /* Arrays */
-            Arrays.SingleArrayExample();
-            Arrays.MultiDimensionArrayExample();
-            Arrays.JaggedArrayExample();
+            // Arrays.SingleArrayExample();
+            // Arrays.MultiDimensionArrayExample();
+            // Arrays.JaggedArrayExample();
 
             /* Statements: Exceptions */
 
@@ -71,6 +71,16 @@ namespace ConsoleApplication2
 
             /* Class: Events */
             // ClassEvent.EventExample();
+
+            /* Task Parallel Library */
+            // TaskParallelLibrary.TaskExample();
+            TaskParallelLibrary.TaskContinueWithExample();
+
+            // TaskParallelLibrary.ParallelForExample();
+            //TaskParallelLibrary.ParallelForEachExample();
+
+            /* Asyn Await */
+            // AsyncPattern.AsyncExample();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadKey();

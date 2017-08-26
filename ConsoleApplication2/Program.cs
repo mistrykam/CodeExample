@@ -68,19 +68,24 @@ namespace ConsoleApplication2
             // Delegates.DelegateExample();
             // Delegates.DelegateExtendingClassBehaviour();
             // Delegates.MulticastDelegate();
+            // Delegates.DelegateAsAParameter();
+
+            /* Lambda Expressions */
+            LambdaExpressions.SimpleExample();
 
             /* Class: Events */
             // ClassEvent.EventExample();
 
             /* Task Parallel Library */
             // TaskParallelLibrary.TaskExample();
-            TaskParallelLibrary.TaskContinueWithExample();
+            // TaskParallelLibrary.TaskContinueWithExample();
 
             // TaskParallelLibrary.ParallelForExample();
             //TaskParallelLibrary.ParallelForEachExample();
 
             /* Asyn Await */
-            // AsyncPattern.AsyncExample();
+            //AsyncAwait.NotAsyncExample();
+            //AsyncAwait.AsyncExample();
 
             Console.Write("\n\nPress any key to continue...");
             Console.ReadKey();

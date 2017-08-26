@@ -39,6 +39,7 @@
     <Reference Include="System.Net.Http" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="LambdaExpressions.cs" />
     <Compile Include="Arrays.cs" />
     <Compile Include="AsyncAwait.cs" />
     <Compile Include="ClassAccessModifers.cs" />

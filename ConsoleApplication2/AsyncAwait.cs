@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Net.Http;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace ConsoleApplication2
@@ -9,6 +10,23 @@ namespace ConsoleApplication2
         /* Async
           
             https://www.youtube.com/watch?v=DqjIQiZ_ql4&t=894s
+
+            NOTE: 
+                The aysnc keyword goes into the method signature: example   public async int SomeMethod()
+                It tells the complier that an await may appear in the method.
+                                              ---------------- 
+                                              
+            The core of async programming are the Task and Task<T> objects, which model asynchronous operations. 
+            They are supported by the async and await keywords. The model is fairly simple in most cases:
+            
+            For I/O-bound code, you await an operation which returns a Task or Task<T> inside of an async method.
+
+            For CPU-bound code, you await an operation which is started on a background thread with the Task.Run method.
+            
+            The await keyword is where the magic happens. It yields control to the caller of the method that performed await, 
+            and it ultimately allows a UI to be responsive or a service to be elastic.            
+                                       --                       -------
+
          
             Writing I/O and CPU-bound asynchronous code is straightforward using the .NET Task-based async model. 
             
@@ -56,30 +74,50 @@ namespace ConsoleApplication2
 
          */
 
-        private static async Task DoSomethingAsync()
-        {
-            Random rand = new Random();
+        private static Random rand = new Random();
 
-            Console.WriteLine("\n\tWork started... {0}", DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
+        private static int DoBigTask(string name)
+        {
+            Console.WriteLine("{0} started at {1}", name, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
+
+            int cost = 0;
+
             for (int i = 0; i < 10; i++)
             {
-                await Task.Delay(rand.Next(250, 1000));
-                Console.WriteLine("\t\tCompleted {0} of 10", i + 1);
+                int work = rand.Next(1, 500);
+                Thread.Sleep(work);
+                cost += work;
+                Console.WriteLine("\t\tCompleted sub-task {0} of 10 :: {1}" , i + 1, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
             }
 
-            Console.WriteLine("\n\tWork completed {0}", DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"));
+            Console.WriteLine("{0} done at {1} cost = {2}", name, DateTime.Now.ToString("MM/dd/yyyy hh:mm:ss.fff tt"), cost);
+
+            return cost;
         }
 
-        public static void AsyncExample()
-        {
-            var task1 = new Task(() =>
-            {
-                Console.WriteLine("doing...");
-                Task.Delay(1000);
-                Console.WriteLine("done");
-            });
 
-            task1.Start();
+        /* Not Async: Have to wait for the BigTask to complete first */
+
+        public static void NotAsyncExample()
+        {
+            // Not ASYNC 
+            int car1RepairCost = DoBigTask("Service Car #1");                        
+            int car2RepairCost = DoBigTask("Service Car #2");
+            int car3RepairCost = DoBigTask("Service Car #3");
+        }
+
+        // wrap the big long method into into Task to execute which is now an Async Method
+        private static Task<int> DoBigTaskAsync(string name)
+        {
+            return Task.Run<int>(() => DoBigTask(name));
+        }
+
+        public static async void AsyncExample()
+        {
+            // this would make sense if it's being called from a UI or service
+            int car1RepairCost = await DoBigTaskAsync("Service Car #1");
+            int car2RepairCost = await DoBigTaskAsync("Service Car #2");
+            int car3RepairCost = await DoBigTaskAsync("Service Car #3");
         }
     }
 }

@@ -11,6 +11,18 @@ namespace ConsoleApplication2
          * 
            Are type-safe function pointers. 
 
+           It's actually a class - synatax is converted into a class: 
+
+            eg:
+                delegate int MyFunc(int a, int b);
+                int TheHanderMethod(int a, int b) { return a+b; }
+
+                When assigning it a value, you write:
+                    MyFunc = TheHandlerMethod;
+
+                Which is the same-as:
+                    MyFunc = new MyFunc(TheHandlerMethod);
+
            All delegate are multicast delegates.
          
            The declaration of a delegate type is similar to a method signature. It has a return value and any number of parameters of any type.
@@ -140,7 +152,7 @@ namespace ConsoleApplication2
         {
             Console.WriteLine("Method4::{0}", name);
         }
-
+       
         public static void MulticastDelegate()
         {
             MyDelegateMethod myDelegate;
@@ -150,6 +162,26 @@ namespace ConsoleApplication2
             myDelegate += Method4;
 
             myDelegate("Jennifer Lawerence");
+        }
+
+        internal static void MyMethod(string name, MyDelegateMethod method)
+        {
+            method(name);
+        }
+
+        /* Delegate as a paramter */
+
+        public static void DelegateAsAParameter()
+        {
+            MyMethod("Billy Rindle", Method1);
+            MyMethod("Sally Rindle", Method2);
+
+            // anonymous delegate methods - type get inferred
+
+            MyMethod("Anon1 Delegate1", (string x) => Console.WriteLine(x));
+
+            MyMethod("Anon2 Delegate2", (x) => Console.WriteLine(x));
+
         }
     }
 }

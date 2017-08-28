@@ -64,17 +64,29 @@ namespace ConsoleApplication2
             /* Class: Access Modifers */
             // ClassAccessModifers.ClassExample();
 
+            /* Extension Methods */
+            // ExtensionMethods.ExtensionMethodExample();
+
+            /* Attributes */
+            // AttributeDecorators.AttributeExample();
+
+            /* Reflection */
+            //Reflection.SimpleExample();
+            // Reflection.AssemblyExample();
+            Reflection.ExecuteClassExample();
+
             /* Delegates */
             // Delegates.DelegateExample();
             // Delegates.DelegateExtendingClassBehaviour();
             // Delegates.MulticastDelegate();
             // Delegates.DelegateAsAParameter();
 
-            /* Lambda Expressions */
-            LambdaExpressions.SimpleExample();
-
             /* Class: Events */
             // ClassEvent.EventExample();
+
+            /* Lambda Expressions */
+            // LambdaExpressions.SimpleExample();
+
 
             /* Task Parallel Library */
             // TaskParallelLibrary.TaskExample();

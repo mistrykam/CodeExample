@@ -2,7 +2,7 @@
 
 namespace ConsoleApplication2
 {
-    class LambdaExpressions
+    class Lambda
     {
         /*
          Lambda Expressions:
@@ -11,9 +11,11 @@ namespace ConsoleApplication2
 
             delegates       --- inline method  eg: delegate (int k) { return k * k; };
                 or 
-            expression tree --- use  => to indicate that's it's a lambda expression eg: (k) => ( k* k );
+            lambda expression --- use  => to indicate that's it's a lambda expression eg: (k) => ( k* k );
             
          types. 
+
+         NOTE: The anonymous method will be converted by the compiler into a static method that is referenced.
 
          An anonymous function is an "inline" statement or expression that can be used wherever a delegate type is expected. 
          You can use it to initialize a named delegate or pass it instead of a named delegate type as a method parameter.                             
@@ -38,6 +40,27 @@ namespace ConsoleApplication2
          Example:
             int[] numbers = { 5, 4, 1, 3, 9, 8, 6, 7, 2, 0 };  
             int oddNumbers = numbers.Count(n => n % 2 == 1);  
+
+        Func:
+            It takes zero or more input parameter ans returns a value.
+
+            Func<TResult>              Has one result value, no parameter.
+            Func<T, TResult>           Has one result value, one parameter.
+            Func<T1, T2, TResult>      Has one result value, two parameters.
+
+        Action:
+            It takes zero or more input parameters and returns nothing.
+
+            Action<T>           Has one result value, one parameter.
+            Action<T1, T2>      Has one result value, two parameters.
+
+        Predicate:
+
+            Predicate is a function pointer for method which returns boolean value. They are commonly used for iterating a 
+            collection or to verify if the value does already exist. 
+
+            Predicate<in T>
+
          */
 
         delegate int MyDelegateFunc(int x);
@@ -52,6 +75,11 @@ namespace ConsoleApplication2
 
             // or even simpler as: since the type and return value is inferred from the method signature
             MyDelegateFunc d3 = (k) => ( k* k );
+        }
+
+        public static void BuiltInLambda()
+        {
+
         }
     }
 }

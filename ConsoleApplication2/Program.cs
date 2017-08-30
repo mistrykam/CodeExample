@@ -64,6 +64,12 @@ namespace ConsoleApplication2
             /* Class: Access Modifers */
             // ClassAccessModifers.ClassExample();
 
+            /* Generics */
+            // Generics
+
+            /* Generic Collection */
+            GenericCollections.CollectionExample();
+
             /* Extension Methods */
             // ExtensionMethods.ExtensionMethodExample();
 
@@ -71,9 +77,9 @@ namespace ConsoleApplication2
             // AttributeDecorators.AttributeExample();
 
             /* Reflection */
-            //Reflection.SimpleExample();
+            // Reflection.SimpleExample();
             // Reflection.AssemblyExample();
-            Reflection.ExecuteClassExample();
+            // Reflection.ExecuteClassExample();
 
             /* Delegates */
             // Delegates.DelegateExample();
@@ -85,8 +91,16 @@ namespace ConsoleApplication2
             // ClassEvent.EventExample();
 
             /* Lambda Expressions */
-            // LambdaExpressions.SimpleExample();
+            // Lambda.SimpleExample();
 
+            /* LINQ */
+            // LINQExpressions.SimpleExample();
+            // LINQExpressions.SelectionExample();
+            // LINQExpressions.IEnumerablevsIQueryable();
+            // LINQExpressions.MinMaxExample();
+            // LINQExpressions.SelectManyExample();
+            // LINQExpressions.TakeSkipExample();
+            LINQExpressions.GroupByExample();
 
             /* Task Parallel Library */
             // TaskParallelLibrary.TaskExample();

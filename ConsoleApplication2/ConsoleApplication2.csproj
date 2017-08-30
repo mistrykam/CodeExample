@@ -41,8 +41,9 @@
   <ItemGroup>
     <Compile Include="AttributeDecorators.cs" />
     <Compile Include="ExtensionMethods.cs" />
+    <Compile Include="GenericCollections.cs" />
     <Compile Include="Generics.cs" />
-    <Compile Include="LambdaExpressions.cs" />
+    <Compile Include="Lambda.cs" />
     <Compile Include="Arrays.cs" />
     <Compile Include="AsyncAwait.cs" />
     <Compile Include="ClassAccessModifers.cs" />
@@ -50,6 +51,7 @@
     <Compile Include="ClassAsIsOperators.cs" />
     <Compile Include="ClassEvent.cs" />
     <Compile Include="Delegates.cs" />
+    <Compile Include="LINQExpressions.cs" />
     <Compile Include="Reflection.cs" />
     <Compile Include="StatementsExceptions.cs" />
     <Compile Include="StatementsControl.cs" />

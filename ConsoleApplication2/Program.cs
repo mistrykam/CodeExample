@@ -34,6 +34,7 @@ namespace ConsoleApplication2
             // StatementsControl.JumpExample();
 
             /* Arrays */
+
             // Arrays.SingleArrayExample();
             // Arrays.MultiDimensionArrayExample();
             // Arrays.JaggedArrayExample();
@@ -47,69 +48,86 @@ namespace ConsoleApplication2
             // StatementsExceptions.UncheckedExample();
 
             /* Statements: Parameters */
+
             // StatementsParameters.ParamsExample();
             // StatementsParameters.RefExample();
             // StatementsParameters.OutExample();
 
             /* Class: As Is */
+
             //ClassAsIsOperators.ConvertObjectExample();
             //ClassAsIsOperators.CheckObjectExample();
 
             /* Class: New Base This */
+
             // ClassBaseNewThisOperators.NewHidingExample();
             // ClassBaseNewThisOperators.BaseExample();
             // ClassBaseNewThisOperators.ThisExample();
             // ClassBaseNewThisOperators.IndexerExample();
 
             /* Class: Access Modifers */
+
             // ClassAccessModifers.ClassExample();
 
             /* Generics */
+
             // Generics
 
             /* Generic Collection */
-            GenericCollections.CollectionExample();
+            // GenericCollections.CollectionExample();
+
+            /* Yield */
+
+            YieldKeyword.SimpleExample();
+            YieldKeyword.PrintListExample();
 
             /* Extension Methods */
+
             // ExtensionMethods.ExtensionMethodExample();
 
             /* Attributes */
+
             // AttributeDecorators.AttributeExample();
 
             /* Reflection */
+
             // Reflection.SimpleExample();
             // Reflection.AssemblyExample();
             // Reflection.ExecuteClassExample();
 
             /* Delegates */
+
             // Delegates.DelegateExample();
             // Delegates.DelegateExtendingClassBehaviour();
             // Delegates.MulticastDelegate();
             // Delegates.DelegateAsAParameter();
 
             /* Class: Events */
+
             // ClassEvent.EventExample();
 
             /* Lambda Expressions */
             // Lambda.SimpleExample();
 
             /* LINQ */
+
             // LINQExpressions.SimpleExample();
             // LINQExpressions.SelectionExample();
             // LINQExpressions.IEnumerablevsIQueryable();
             // LINQExpressions.MinMaxExample();
             // LINQExpressions.SelectManyExample();
             // LINQExpressions.TakeSkipExample();
-            LINQExpressions.GroupByExample();
+            // LINQExpressions.GroupByExample();
 
             /* Task Parallel Library */
+
             // TaskParallelLibrary.TaskExample();
             // TaskParallelLibrary.TaskContinueWithExample();
-
             // TaskParallelLibrary.ParallelForExample();
-            //TaskParallelLibrary.ParallelForEachExample();
+            // TaskParallelLibrary.ParallelForEachExample();
 
             /* Asyn Await */
+
             //AsyncAwait.NotAsyncExample();
             //AsyncAwait.AsyncExample();
 

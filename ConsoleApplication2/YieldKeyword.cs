@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 
 namespace ConsoleApplication2
 {
@@ -47,6 +43,24 @@ namespace ConsoleApplication2
             {
                 Console.WriteLine(item);
             }
+        }
+
+        static Random rand = new Random();
+
+        static IEnumerable<int> GetRandomNumber(int count)
+        {
+            for (int i = 0; i < count; i++)
+            {
+                yield return rand.Next(1, 100);
+            }
+        }
+
+        public static void PrintNumbers()
+        {
+            var list = GetRandomNumber(12);
+
+            foreach(int n in list)
+                Console.WriteLine(n);
         }
 
         internal class Person

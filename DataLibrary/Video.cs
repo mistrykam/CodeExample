@@ -1,4 +1,6 @@
-﻿using System.Data.Entity;
+﻿using System.Linq;
+using System.Data.Entity;
+
 
 namespace DataLibrary
 {
@@ -13,28 +15,33 @@ namespace DataLibrary
     {
         public DbSet<Video> Videos { get; set; }
 
-        // Data Source=(LocalDB)\v11.0;AttachDbFileName=C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf;InitialCatalog=VideoDatabase;Integrated Security=True;MultipleActiveResultSets=True
-        // Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf;Integrated Security=True
-
-        //public VideoContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf;InitialCatalog=VideoDatabase;Integrated Security = True")
         public VideoContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf;Integrated Security=True")
         {
 
         }
     }
 
-    public class Example
+    public class VideoStore
     {
-        public static void ExampleCode1()
+        public static void AddVideo(int videoId, string title, string description)
         {
-            using (VideoContext videoContext = new VideoContext())
+            using (VideoContext db = new VideoContext())
             {
-                Video video = new Video() { Title = "Limitless", Description = "Unlimited power via pharam" };
+                Video video = new Video() { VideoId = videoId, Description = description, Title = title };
 
-                videoContext.Videos.Add(video);
-                videoContext.SaveChanges();
+                db.Videos.Add(video);
+
+                db.SaveChanges();
+            }
+        }
+
+        public static void GetAllVideos()
+        {
+            using (VideoContext db = new VideoContext())
+            {
+                var videoList = from v in db.Videos
+                                select v;
             }
         }
     }
-
 }

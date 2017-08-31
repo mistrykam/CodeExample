@@ -58,6 +58,7 @@
     <Compile Include="ReferenceTypes.cs" />
     <Compile Include="StatementsParameters.cs" />
     <Compile Include="TaskParallelLibrary.cs" />
+    <Compile Include="Threading.cs" />
     <Compile Include="ValueTypes.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

@@ -1,4 +1,5 @@
 ﻿using System;
+using DataLibrary;
 
 namespace ConsoleApplication2
 {
@@ -125,7 +126,7 @@ namespace ConsoleApplication2
             // Threading.SimpleExample();
             // Threading.ConflictThread();
             // Threading.NoConflictThread();
-            Threading.ThreadJoinExample();
+            // Threading.ThreadJoinExample();      
 
             /* Task Parallel Library */
 
@@ -136,8 +137,13 @@ namespace ConsoleApplication2
 
             /* Asyn Await */
 
-            //AsyncAwait.NotAsyncExample();
-            //AsyncAwait.AsyncExample();
+            // AsyncAwait.NotAsyncExample();
+            // AsyncAwait.AsyncExample();
+
+            /* Entity Framework */
+
+            DataLibrary.VideoStore.AddVideo(1, "Finding Nemo", "Clown fish loses his son and goes looking for him.");
+            DataLibrary.VideoStore.GetAllVideos();
 
 
             Console.Write("\n\nPress any key to continue...");

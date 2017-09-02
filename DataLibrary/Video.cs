@@ -1,7 +1,6 @@
 ﻿using System.Linq;
 using System.Data.Entity;
 
-
 namespace DataLibrary
 {
     public class Video
@@ -11,11 +10,17 @@ namespace DataLibrary
         public string Description { get; set; }
     }
 
-    public class VideoContext : DbContext
+    internal class VideoContext : DbContext
     {
         public DbSet<Video> Videos { get; set; }
 
-        public VideoContext() : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename=C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf;Integrated Security=True")
+        /*
+            base("VideoContext") 
+
+            Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf';Integrated Security=True;
+        */
+
+        public VideoContext() // : base(@"Data Source=(LocalDB)\MSSQLLocalDB;AttachDbFilename='C:\Users\Kam\Documents\Visual Studio 2015\Projects\CodeExample\DataLibrary\VideoDatabase.mdf';Integrated Security=True")
         {
 
         }
@@ -41,6 +46,13 @@ namespace DataLibrary
             {
                 var videoList = from v in db.Videos
                                 select v;
+
+                foreach (Video video in videoList)
+                {
+                    System.Console.WriteLine(video.VideoId);
+                    System.Console.WriteLine(video.Title);
+                    System.Console.WriteLine(video.Description);
+                }
             }
         }
     }

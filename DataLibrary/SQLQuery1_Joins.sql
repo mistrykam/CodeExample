@@ -1,7 +1,5 @@
 ﻿SELECT TOP 1 * FROM TableA ORDER BY TableAId ASC
 
-
-
 -- [1] Common in both tables (INNER JOIN)
 SELECT 
 	TableA.*, 
@@ -199,6 +197,3 @@ END CATCH
 
 	BEGIN TRANSACTION myTX
 		INSERT INTO Persons VALUES ('John1', ' Smith');
-
-	
-

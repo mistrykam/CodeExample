@@ -142,8 +142,11 @@ namespace ConsoleApplication2
 
             /* Entity Framework */
 
-            DataLibrary.VideoStore.AddVideo(1, "Finding Nemo", "Clown fish loses his son and goes looking for him.");
-            DataLibrary.VideoStore.GetAllVideos();
+            // See the C:\Users\Kam\Documents\Visual Studio 2015\Projects\VideoStoreWebApplication
+
+            // This does not work - library reference fails
+            //DataLibrary.VideoStore.AddVideo(1, "Finding Nemo", "Clown fish loses his son and goes looking for him.");
+            //DataLibrary.VideoStore.GetAllVideos();
 
 
             Console.Write("\n\nPress any key to continue...");
